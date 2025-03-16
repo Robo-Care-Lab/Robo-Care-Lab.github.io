@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoboCare Lab - Meet the Team</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e9e1d7;
+            color: black;
+        }
+        
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .logo-container1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+        }
+
+        .logo-image1 {
+            width: 200px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .logo1 {
+            font-size: 42px;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin: 20px 0;
+            padding: 10px 0;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 5px 15px;
+        }
+
+        .nav-menu a.active {
+            border-bottom: 3px solid #333;
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #777;
+            background-color: #e9e1d7;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .team-category {
+            margin-bottom: 40px;
+        }
+
+        .team-category h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #999;
+            padding-bottom: 5px;
+            text-align: center;
+        }
+
+        .team-members {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .team-photo:hover {
+            transform: scale(1.1);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+        }
+
+        .contact-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .contact-name {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo-container1">
+        <img src="images/logo.jpg" alt="Lab Logo" class="logo-image1">
+        <div class="logo1" onclick="window.location.href='index.html'">RoboCare Lab</div>
+    </div>
+
+    <div class="nav-menu">
+        <a href="research.html">PUBLICATIONS</a>
+        <a href="projects.html">PROJECTS</a>
+        <a href="team.html" class="active">MEET THE TEAM</a>
+        <a href="join.html">JOIN US</a>
+    </div>
+    
+    <div class="main-container">
+        <div class="page-title">Meet the Team</div>
+        
+        <!-- Principal Investigator -->
+        <div class="team-category">
+            <h2>Principal Investigator</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <a href="yuan.html">
+                        <img src="images/profile/yuan.jpg" alt="Principal Investigator" class="team-photo">
+                    </a>
+                    
+            <p>Dr. Fiona Yuan </p> 
+                </div>
+            </div>
+        </div>
+
+        <!-- PhD Students -->
+        <div class="team-category">
+            <h2>PhD Students</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <a href="about-me-phd1.html">
+                        <img src="images/profile/kruthika.jpg" alt="PhD Student 1" class="team-photo">
+                    </a>
+                    <p>Kruthika Gangaraju</p>
+                </div>
+                <div class="team-member">
+                    <a href="about-me-phd2.html">
+                        <img src="path-to-phd2-image.jpg" alt="PhD Student 2" class="team-photo">
+                    </a>
+                </div>
+                <div class="team-member">
+                    <a href="about-me-phd3.html">
+                        <img src="path-to-phd3-image.jpg" alt="PhD Student 3" class="team-photo">
+                    </a>
+                </div>
+                <!-- Add more PhD students here as needed -->
+            </div>
+        </div>
+
+        <!-- Master's Students -->
+        <div class="team-category">
+            <h2>Master's Students</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <a href="about-me-master1.html">
+                        <img src="path-to-master1-image.jpg" alt="Master's Student 1" class="team-photo">
+                    </a>
+                </div>
+                <div class="team-member">
+                    <a href="about-me-master2.html">
+                        <img src="path-to-master2-image.jpg" alt="Master's Student 2" class="team-photo">
+                    </a>
+                </div>
+                <!-- Add more Master's students here as needed -->
+            </div>
+        </div>
+
+        <!-- Undergraduate Students -->
+        <div class="team-category">
+            <h2>Undergraduate Students</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <a href="about-me-ug1.html">
+                        <img src="images/profile/SASE_Headshots-91 (2).jpg" alt="Undergraduate Student 1" class="team-photo">
+                    </a>
+                    <p>Kerry Xiao</p>
+                </div>
+                <div class="team-member">
+                    <a href="about-me-ug2.html">
+                        <img src="images/profile/wadhwa.jpg" alt="Undergraduate Student 2" class="team-photo">
+                    </a>
+                    <p>Adrian Wadhwa</p>
+                </div>
+                <div class="team-member">
+                    <a href="about-me-ug3.html">
+                        <img src="path-to-ug3-image.jpg" alt="Undergraduate Student 3" class="team-photo">
+                    </a>
+                </div>
+                <!-- Add more Undergraduate students here as needed -->
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="contact-title">Get in Touch</div>
+        <div class="contact-name">fyuan3@wpi.edu</div>
+    </div>
+
+</body>
+</html>

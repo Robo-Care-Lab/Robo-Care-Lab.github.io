@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join RoboCare Lab</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e9e1d7;
+            color: black;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .logo-container1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+        }
+
+        .logo-image1 {
+            width: 200px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .logo1 {
+            font-size: 42px;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin: 20px 0;
+            padding: 10px 0;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 5px 15px;
+        }
+
+        .nav-menu a.active {
+            border-bottom: 3px solid #333;
+        }
+
+        .main-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #777;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .content {
+            text-align: left;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .survey-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .survey-container iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo-container1">
+        <img src="images/logo.jpg" alt="Lab Logo" class="logo-image1">
+        <div class="logo1" onclick="window.location.href='index.html'">RoboCare Lab</div>
+    </div>
+
+    <div class="nav-menu">
+        <a href="research.html">PUBLICATIONS</a>
+        <a href="projects.html">PROJECTS</a>
+        <a href="team.html">MEET THE TEAM</a>
+        <a href="join.html" class="active">JOIN US</a>
+    </div>
+
+    <div class="main-container">
+        <h2>Join RoboCare Lab</h2>
+
+        <div class="content">
+            <p>Are you passionate about robotics, AI, and human-robot interaction? Our lab is always looking for talented PhD, Master's, and undergraduate students to join our research team.</p>
+            <p>If you're interested, please fill out the survey below. We'll review your submission and get in touch with potential candidates.</p>
+        </div>
+
+        <div class="survey-container">
+            <iframe src="https://wpi.qualtrics.com/jfe/form/SV_ePfEn3NjY7Qkhkq" title="Join RoboCare Lab Survey"></iframe>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="contact-title">Get in Touch</div>
+        <div class="contact-name">fyuan3@wpi.edu</div>
+    </div>
+
+</body>
+</html>

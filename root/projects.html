@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoboCare Lab - Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e9e1d7;
+            color: black;
+        }
+        
+        .header {
+    display: flex; /* Show the header */
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.logo-container1 {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.logo-image1 {
+    width: 200px;  /* Adjust size as needed */
+    height: auto;   /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+.logo1 {
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center;
+}
+        
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin: 20px 0;
+            padding: 10px 0;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 5px 15px;
+        }
+        
+        .nav-menu a.active {
+            border-bottom: 3px solid #333;
+        }
+        
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #777;
+            background-color: #e9e1d7;
+        }
+        
+        .page-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        
+        .project-area {
+            margin-bottom: 40px;
+        }
+        
+        .project-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #999;
+            padding-bottom: 5px;
+        }
+        
+        .project-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .project-text {
+            line-height: 1.6;
+        }
+        
+        .project-image {
+            width: 100%;
+            height: 200px;
+            border: 1px solid #000;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo-container1">
+        <img src="images/logo.jpg" alt="Lab Logo" class="logo-image1">
+        <div class="logo1" onclick="window.location.href='index.html'">RoboCare Lab</div>
+    </div>
+</div>
+    <div class="nav-menu">
+        <a href="research.html">PUBLICATIONS</a>
+        <a href="projects.html" class="active">PROJECTS</a>
+        <a href="team.html">MEET THE TEAM</a>
+        <a href="join.html">JOIN US</a>
+    </div>
+    
+    <div class="main-container">
+        <div class="page-title">Our Projects</div>
+        
+        <div class="project-area">
+            <div class="project-title">Human-Robot Interaction</div>
+            <div class="project-content">
+                <div class="project-text">
+                    <p>Our lab explores fundamental aspects of human-robot interaction with a specific focus on healthcare applications. We investigate how robots can effectively communicate with humans, understand social cues, and respond appropriately in healthcare settings.</p>
+                    <p>Current projects include developing models for robot empathy, designing intuitive interfaces for healthcare professionals to program assistive robots, and studying long-term human-robot relationships in care environments.</p>
+                </div>
+                <div class="project-image">Human-Robot Interaction Image</div>
+            </div>
+        </div>
+        
+        <div class="project-area">
+            <div class="project-title">Emotionally Intelligent Robotics</div>
+            <div class="project-content">
+                <div class="project-text">
+                    <p>We are developing robots capable of recognizing and responding to human emotions, which is crucial for effective healthcare assistance. Our research combines computer vision, natural language processing, and machine learning to create robots that can detect emotional states and respond appropriately.</p>
+                    <p>This work includes creating datasets of emotional expressions in healthcare contexts, developing multimodal emotion recognition algorithms, and designing robot behaviors that convey empathy and understanding.</p>
+                </div>
+                <div class="project-image">Emotional Intelligence Image</div>
+            </div>
+        </div>
+        
+        <div class="project-area">
+            <div class="project-title">Assistive Technologies</div>
+            <div class="project-content">
+                <div class="project-text">
+                    <p>Our assistive technology research focuses on creating robots that can help individuals with physical limitations, cognitive impairments, or age-related challenges. We design robotic systems that can assist with daily activities, provide medication reminders, support rehabilitation exercises, and enhance independence.</p>
+                    <p>Current projects include developing adaptive learning algorithms that personalize assistance based on individual needs and preferences, creating intuitive control systems for assistive robots, and designing robots that can safely navigate home environments.</p>
+                </div>
+                <div class="project-image">Assistive Technologies Image</div>
+            </div>
+        </div>
+        
+        <!-- Add more projects here -->
+        
+    </div>
+    
+    <div class="footer">
+        <div class="contact-title">Get in Touch</div>
+        <div class="contact-name">fyuan3@wpi.edu</div>
+    </div>
+</body>
+</html>

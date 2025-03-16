@@ -3,9 +3,282 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello</title>
+    <title>RoboCare Lab</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e9e1d7;
+            color: black;
+            /* Removed overflow: hidden to allow scrolling */
+        }
+ 
+        .animation-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: white;
+            z-index: 1000;
+        }
+        
+        .typing-text {
+            font-size: 32px;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid black;
+            width: 0;
+            animation: typing 3s steps(50, end) forwards, blink 0.7s step-end infinite;
+            max-width: 80%;
+            text-align: center;
+        }
+        
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 62%; }
+        }
+        
+        @keyframes blink {
+            from, to { border-color: black; }
+            0% { border-color: transparent; }
+        }
+        
+        .logo-container {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        
+        .logo-container img {
+            width: 200px;
+            height: auto;
+        }
+        
+        .lab-name {
+            font-size: 36px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        /* Fixed transition overlay */
+        .transition-overlay {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: #e9e1d7;
+            transform: scale(0);
+            transform-origin: bottom right;
+            z-index: 999;
+            transition: transform 1s ease-in-out;
+        }
+        
+        /* Content styles */
+        .content {
+            display: none;
+            /* Important: set position relative and higher z-index */
+            position: relative;
+            z-index: 2;
+            
+            background-color: #e9e1d7;
+        }
+        .header {
+    display: flex; /* Show the header */
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.logo-container1 {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.logo-image1 {
+    width: 200px;  /* Adjust size as needed */
+    height: auto;   /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+.logo1 {
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+        
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin: 20px 0;
+            padding: 10px 0;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 5px 15px;
+        }
+        
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #777;
+            background-color: #e9e1d7;
+        }
+        
+        .welcome {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .image-placeholder {
+            width: 100%;
+            height: 200px;
+            border: 1px solid #000;
+            background-color: white;
+        }
+        
+        .research-section, .projects-section {
+            margin-bottom: 30px;
+        }
+        
+        .research-title, .projects-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-bottom: 20px;
+        }
+        
+        .contact-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .contact-name {
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello</h1>
+    <!-- Transition overlay -->
+    <div class="transition-overlay" id="transition-overlay"></div>
+    
+    <!-- Enhanced animation -->
+    <div class="animation-container" id="animation">
+        <div class="typing-text" id="typing-text">Empowering social robots to assist, connect, and care</div>
+        <div class="logo-container" id="logo-container">
+            <img src="images/logo.jpg" alt="RoboCare Lab Logo" onerror="this.src='data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22200%22%20height%3D%22200%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%23CCCCCC%22%2F%3E%3Ctext%20x%3D%22100%22%20y%3D%22100%22%20font-family%3D%22Arial%22%20font-size%3D%2220%22%20text-anchor%3D%22middle%22%20alignment-baseline%3D%22middle%22%20fill%3D%22%23333333%22%3ELogo%3C%2Ftext%3E%3C%2Fsvg%3E'">
+            <div class="lab-name">RoboCare Lab</div>
+        </div>
+    </div>
+    
+    <!-- Content based on the image -->
+    <div class="content" id="content">
+        <div class="header">
+            <div class="logo-container1">
+                <img src="images/logo.jpg" alt="Lab Logo" class="logo-image1">
+                <div class="logo1">RoboCare Lab</div>
+            </div>
+        </div>
+        
+
+        
+        <div class="nav-menu">
+            <a href="research.html">PUBLICATIONS</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="team.html">MEET THE TEAM</a>
+            <a href="join.html">JOIN US</a>
+        </div>
+        
+        <div class="main-container">
+            <div class="welcome">
+                Welcome to the Socially Intelligent Robotics for Healthcare (RoboCare) Lab
+            </div>
+            
+            <div class="content-grid">
+                <div class="image-placeholder"></div>
+                
+                <div class="research-section">
+                    <div class="research-title">Our Research</div>
+                    <div class="research-content">
+                        We focus on developing socially intelligent robots that can assist in healthcare settings. Our research combines artificial intelligence, robotics engineering, and human-computer interaction to create systems that understand and respond to human needs.
+                    </div>
+                </div>
+                
+                <div class="projects-section">
+                    <div class="projects-title">Our Projects</div>
+                    <div class="projects-content">
+                        Our ongoing projects include assistive robots for elderly care, rehabilitation robotics, and emotionally responsive companion robots. We are committed to creating technology that enhances human wellbeing and quality of life.
+                    </div>
+                </div>
+                
+                <div class="image-placeholder"></div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="contact-title">Get in Touch</div>
+            <div class="contact-name">fyuan3@wpi.edu</div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Show logo after typing animation completes
+            setTimeout(() => {
+                document.getElementById("logo-container").style.display = "flex";
+            }, 3500);
+            
+            // Start transition overlay after logo appears
+            setTimeout(() => {
+                document.getElementById("transition-overlay").style.transform = "scale(1)";
+            }, 5000);
+            
+            // Switch to main content after transition completes
+            setTimeout(() => {
+                document.getElementById("animation").style.display = "none";
+                document.getElementById("transition-overlay").style.display = "none";
+                document.getElementById("content").style.display = "block";
+                // Ensure body can scroll after animation
+                document.body.style.overflow = "auto";
+            }, 4100);
+        });
+    </script>
 </body>
 </html>

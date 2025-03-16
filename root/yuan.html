@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Dr. John Doe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e9e1d7;
+            color: black;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .logo-container1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+        }
+
+        .logo-image1 {
+            width: 200px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .logo1 {
+            font-size: 42px;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin: 20px 0;
+            padding: 10px 0;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 5px 15px;
+        }
+
+        .nav-menu a.active {
+            border-bottom: 3px solid #333;
+        }
+
+        .main-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #777;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .headshot {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #333;
+            margin-bottom: 20px;
+        }
+
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .title {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .bio {
+            text-align: left;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .publications {
+            text-align: left;
+        }
+
+        .publications h3 {
+            margin-bottom: 10px;
+        }
+
+        .publications ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .publications li {
+            margin-bottom: 10px;
+        }
+
+        .publications a {
+            text-decoration: none;
+            color: #0073e6;
+        }
+
+        .publications a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo-container1">
+        <img src="images/logo.jpg" alt="Lab Logo" class="logo-image1">
+        <div class="logo1" onclick="window.location.href='index.html'">RoboCare Lab</div>
+    </div>
+
+    <div class="nav-menu">
+        <a href="research.html">RESEARCH</a>
+        <a href="projects.html">PROJECTS</a>
+        <a href="team.html" class="active">MEET THE TEAM</a>
+        <a href="join.html">JOIN US</a>
+    </div>
+
+    <div class="main-container">
+        <img src="images/profile/yuan.jpg" alt="Dr. Fiona Yuan" class="headshot">
+        <div class="name">Dr. Fiona Yuan</div>
+        <div class="title">Principal Investigator - RoboCare Lab</div>
+
+        <div class="bio">
+            <p>Education: Ph.D., Mechanical Engineering, University of Tennessee, Knoxville, 2024
+                
+                MS, Mechanical Engineering, University of Tennessee, Knoxville, 2019
+                
+                BS, Mechatronics Engineering, Harbin Institute of Technology, China, 2016</p>
+            <p>My research primarily focuses on socially assistive robotics, multimodal human-robot interaction, and human-centered AI to enhance dementia care and other healthcare applications. Motivated by the needs of individuals with dementia and their families, I am dedicated to developing AI and robotic systems to better care for those affected by dementia. My work encompasses robotic perception, decision-making, and feedback mechanisms within the human-robot interaction process.</p>
+            <p>Inspired by human intelligence in caregiving, I am particularly interested in transferring aspects of human intelligence—such as emotional intelligence, social intelligence, adaptability, and personalization—to robots through AI. My research extends beyond robotic modeling and algorithms. Through close collaborations with experts and stakeholders from various disciplines, including nursing, occupational therapy, recreational therapy, social work, caregivers, and individuals with dementia, I am passionate about bringing social robots into real-world applications. Interdisciplinary collaboration is a foundational component of my research.</p>
+        </div>
+
+        <div class="publications">
+            <h3>Selected Publications</h3>
+            <ul>
+                <li>
+                    <a href="https://doi.org/10.1007/s12369-024-01174-6" target="_blank">
+                        Doe, J., Smith, A., & Lee, B. (2024). "Emotion Recognition in Human-Robot Interaction for Healthcare Applications." International Journal of Social Robotics.
+                    </a>
+                </li>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="contact-title">Get in Touch</div>
+        <div class="contact-name">fyuan3@wpi.edu</div>
+    </div>
+
+</body>
+</html>
